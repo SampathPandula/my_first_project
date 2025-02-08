@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/SampathPandula/my_first_project.git'
+                git credentialsId: 'GitHub-Token', url: 'https://github.com/SampathPandula/my_first_project.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {

@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        ECR_REPO = "<AWS_ACCOUNT_ID>.dkr.ecr.ap-east-1.amazonaws.com/demo-app"
+        ECR_REPO = "713881815267.dkr.ecr.ap-east-1.amazonaws.com/demo-app"
     }
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-repo.git'
+                git branch: 'main', url: 'https://github.com/SampathPandula/my_first_project.git'
             }
         }
         stage('Build Docker Image') {
